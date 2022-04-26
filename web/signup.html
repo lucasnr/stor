@@ -50,8 +50,39 @@
 
         <main class="form-main">
           <div class="text-center">
-            <h1 class="form-title">Log in to Stor</h1>
-            <h2 class="form-subtitle">Enter your email and password below</h2>
+            <h1 class="form-title">Sign up to Stor</h1>
+            <h2 class="form-subtitle">
+              Enter your name, email and password below
+            </h2>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label for="givenName">Given name</label>
+                <input
+                  id="givenName"
+                  name="givenName"
+                  type="text"
+                  class="form-control"
+                  placeholder="Given name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label for="familyName">Family name</label>
+                <input
+                  id="familyName"
+                  name="familyName"
+                  type="text"
+                  class="form-control"
+                  placeholder="Family name"
+                  required
+                />
+              </div>
+            </div>
           </div>
 
           <div class="form-group">
@@ -69,7 +100,6 @@
           <div class="form-group">
             <div class="d-flex align-items-start justify-content-between">
               <label for="password">Password</label>
-              <a href="./forgot-password.html">Forgot password?</a>
             </div>
             <input
               id="password"
@@ -81,14 +111,28 @@
             />
           </div>
 
+          <div class="form-group">
+            <div class="d-flex align-items-start justify-content-between">
+              <label for="confirmPassword">Confirm your password</label>
+            </div>
+            <input
+              id="confirmPassword"
+              name="confirmPassword"
+              type="password"
+              class="form-control"
+              placeholder="Confirm your password"
+              required
+            />
+          </div>
+
           <button class="btn btn-primary text-center w-100" type="submit">
-            Log in
+            Sign up
           </button>
         </main>
 
         <footer class="form-footer">
-          <span> Don't have an account? </span>
-          <a href="./signup.html">Sign up</a>
+          <span> Already have an account? </span>
+          <a href="./index.html">Sign in</a>
         </footer>
       </form>
 

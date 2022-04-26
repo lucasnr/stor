@@ -22,12 +22,6 @@
   color: rgba(75, 80, 109, 0.4);
 }
 
-.form a {
-  color: inherit;
-  font-size: 10px;
-  text-decoration: none;
-}
-
 .form .btn {
   border: none;
   font-size: 14px;
