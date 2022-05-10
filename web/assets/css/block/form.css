@@ -22,6 +22,15 @@
   color: rgba(75, 80, 109, 0.4);
 }
 
+.form .form-check {
+  margin-left: 4px;
+}
+
+.form .form-check .form-check-input:checked {
+  background-color: #109cf1;
+  border-color: #109cf1;
+}
+
 .form .btn {
   border: none;
   font-size: 14px;
