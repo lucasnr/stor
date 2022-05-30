@@ -1,0 +1,7 @@
+.datatable .avatar {
+  height: 24px;
+  margin-right: 12px;
+  object-fit: cover;
+  object-position: center;
+  width: 24px;
+}
