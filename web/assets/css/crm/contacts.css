@@ -5,3 +5,7 @@
   object-position: center;
   width: 24px;
 }
+
+.datatable img + span {
+  white-space: nowrap;
+}
