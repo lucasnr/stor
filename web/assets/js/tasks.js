@@ -9,7 +9,9 @@ function createTask(lane, task) {
   element.classList.add(`task-${task.type}`);
   element.innerHTML = `
     <h3 class="task-title">${task.title}</h3>
-    <p class="task-description">${task.description}</p>
+    <p class="task-description">
+      ${task.description || 'No description provided'}
+    </p>
   `;
   lane.appendChild(element);
 }
