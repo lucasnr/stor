@@ -127,6 +127,13 @@ i {
   color: #109cf1;
 }
 
+.navbar .navbar-nav li:last-of-type a:focus,
+.navbar .navbar-nav li:last-of-type a:hover,
+.navbar .navbar-nav li:last-of-type a:focus i,
+.navbar .navbar-nav li:last-of-type a:hover i {
+  color: #f37878;
+}
+
 .navbar .navbar-nav li a span {
   display: none;
 }
