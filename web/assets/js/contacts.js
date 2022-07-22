@@ -1,4 +1,5 @@
 const datatable = document.querySelector('.datatable');
+let data = [];
 
 function createHeader() {
   const header = document.createElement('div');
@@ -24,99 +25,6 @@ function createHeader() {
 }
 
 function createRows() {
-  const data = [
-    {
-      avatar: '../assets/img/avatars/lindsey.png',
-      name: 'Lindsey Stroud',
-      email: 'lindsey.stroud@gmail.com',
-      company: 'Hatchbuck',
-      role: 'Manager',
-      forecast: '50%',
-      recentActivity: '5 minutes ago',
-    },
-    {
-      avatar: '../assets/img/avatars/nicci.png',
-      name: 'Nicci Troiani',
-      email: 'nicci.troiani@gmail.com',
-      company: 'Slack',
-      role: 'Manager',
-      forecast: '75%',
-      recentActivity: '14 minutes ago',
-    },
-    {
-      avatar: '../assets/img/avatars/george.png',
-      name: 'George Fields',
-      email: 'george.fields@gmail.com',
-      company: 'Clockify',
-      role: 'CEO',
-      forecast: '10%',
-      recentActivity: '6 hours ago',
-    },
-    {
-      avatar: '../assets/img/avatars/rebecca.png',
-      name: 'Rebecca Moore',
-      email: 'rebecca.moore@gmail.com',
-      company: 'Upword',
-      role: 'Manager',
-      forecast: '25%',
-      recentActivity: 'Dec 14, 2018',
-    },
-    {
-      avatar: '../assets/img/avatars/jane.png',
-      name: 'Jane Doe',
-      email: 'jane.doe@gmail.com',
-      company: 'Trello',
-      role: 'Engineer',
-      forecast: '30%',
-      recentActivity: 'Dec 12, 2018',
-    },
-    {
-      avatar: '../assets/img/avatars/jones.png',
-      name: 'Jones Dermot',
-      email: 'dermot.jones@gmail.com',
-      company: 'Slack',
-      role: 'Developer',
-      forecast: '40%',
-      recentActivity: 'Dec 11, 2018',
-    },
-    {
-      avatar: '../assets/img/avatars/martin.png',
-      name: 'Martin Merces',
-      email: 'martin.merces@gmail.com',
-      company: 'Google',
-      role: 'Manager',
-      forecast: '60%',
-      recentActivity: 'Dec 9, 2018',
-    },
-    {
-      avatar: '../assets/img/avatars/franz.png',
-      name: 'Franz Ferdinand',
-      email: 'franz.ferdinand@gmail.com',
-      company: 'Facebook',
-      role: 'Manager',
-      forecast: '100%',
-      recentActivity: 'Dec 6, 2018',
-    },
-    {
-      avatar: '../assets/img/avatars/john.png',
-      name: 'John Smith',
-      email: 'john.smith@gmail.com',
-      company: 'Skype',
-      role: 'CEO',
-      forecast: '75%',
-      recentActivity: 'Nov 30, 2018',
-    },
-    {
-      avatar: '../assets/img/avatars/judith.png',
-      name: 'Judith Williams',
-      email: 'judith.williams@gmail.com',
-      company: 'Google',
-      role: 'Designer',
-      forecast: '45%',
-      recentActivity: 'Nov 26, 2018',
-    },
-  ];
-
   data.forEach((contact) => {
     const row = document.createElement('div');
     row.classList.add('row');
@@ -167,5 +75,11 @@ function createRows() {
   });
 }
 
-createHeader();
-createRows();
+fetch('http://localhost:3000/contacts')
+  .then((response) => response.json())
+  .then((contacts) => {
+    data = contacts;
+
+    createHeader();
+    createRows();
+  });
