@@ -6,5 +6,5 @@ form.onsubmit = (event) => {
   const { value: password } = event.target.password;
   console.log({ email, password });
 
-  window.location.href = './crm/index.html';
+  window.location.href = './crm/tasks.html';
 };
