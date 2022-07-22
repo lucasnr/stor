@@ -1,0 +1,95 @@
+.task-lanes {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 6px 0px 18px rgb(0 0 0 / 6%);
+  display: flex;
+  overflow-x: scroll;
+  padding: 24px 6px;
+}
+
+.task-lane {
+  background-color: #f5f6f8;
+  display: flex;
+  flex: 0 0 calc((100% / 4) - (6px * 2));
+  flex-direction: column;
+  height: 100%;
+  margin: 0px 6px;
+  padding: 12px;
+}
+
+.task-lane .task-lane-header {
+  font-size: 14px;
+}
+
+.task {
+  background-color: #fff;
+  border-left: 6px solid transparent;
+  border-radius: 4px;
+  margin-top: 14px;
+  padding: 20px;
+}
+
+.task.task-call {
+  border-color: #109cf1;
+}
+
+.task.task-visit {
+  border-color: #3ccf4e;
+}
+
+.task.task-exam {
+  border-color: #f7ec09;
+}
+
+.task.task-shipment {
+  border-color: #f37878;
+}
+
+.task .task-title {
+  font-size: 14px;
+}
+
+.task .task-description {
+  color: #777;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.legend {
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.legend::before {
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  height: 8px;
+  margin-right: 4px;
+  width: 8px;
+}
+
+.legend.legend-call::before {
+  background-color: #109cf1;
+}
+
+.legend.legend-visit::before {
+  background-color: #3ccf4e;
+}
+
+.legend.legend-exam::before {
+  background-color: #f7ec09;
+}
+
+.legend.legend-shipment::before {
+  background-color: #f37878;
+}
+
+@media (min-width: 768px) {
+  .task-lanes {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}

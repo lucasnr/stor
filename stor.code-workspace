@@ -6,9 +6,6 @@
     {
       "path": "web"
     },
-    {
-      "path": "web-react"
-    }
   ],
   "settings": {
     "liveServer.settings.multiRootWorkspaceName": "web"

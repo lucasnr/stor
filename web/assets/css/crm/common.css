@@ -25,7 +25,7 @@ i {
 }
 
 .main {
-  flex-grow: 1;
+  width: calc(100% - 60px);
 }
 
 .main .content {
@@ -222,6 +222,10 @@ i {
   background-color: #109cf1;
 }
 
+i {
+  vertical-align: middle;
+}
+
 .app {
   transition: filter 0.1s linear;
 }
@@ -235,8 +239,12 @@ i {
 }
 
 @media (min-width: 768px) {
+  .main {
+    width: calc(100% - 256px);
+  }
+
   .main .content {
-    padding: 36px;
+    padding: 24px;
   }
 
   .navbar {
@@ -281,5 +289,11 @@ i {
 
   .navbar .navbar-nav li a span {
     display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main .content {
+    padding: 36px;
   }
 }
